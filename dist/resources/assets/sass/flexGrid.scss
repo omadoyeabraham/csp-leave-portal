@@ -1,0 +1,259 @@
+.main-container{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+  *overflow-y:auto;
+}
+body,html{
+  *overflow-y: hidden;
+  font-family: cursive;
+}
+/*
+* Navigation
+*/
+.card {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+.card-heading{
+  box-shadow: 0 1px 3px rgba(26,33,85,0.1), 0 1px 2px rgba(26,33,85,0.2);
+}
+.bold{font-weight: bold}
+.navbar{
+    margin-bottom: 0;
+    height: 80px;
+    visibility: center;
+    text-align: center;
+}
+.navbar-nav>li>a{
+  padding-top: 30px;
+}
+.navigation{
+    background-color: $secondary-color;
+    display: flex;
+    *min-width: 100vw;
+    justify-content: space-around;
+    align-items: center;
+    height: 60px;
+}
+.navbar-default{
+  background: rgb(30,87,153);
+  background: -moz-linear-gradient(left,  rgba(30,87,153,1) 0%, rgba(41,137,216,1) 50%, rgba(32,124,202,1) 75%, rgba(125,185,232,1) 100%);
+  background: -webkit-linear-gradient(left,  rgba(30,87,153,1) 0%,rgba(41,137,216,1) 50%,rgba(32,124,202,1) 75%,rgba(125,185,232,1) 100%);
+  background: linear-gradient(to right,  rgba(30,87,153,1) 0%,rgba(41,137,216,1) 50%,rgba(32,124,202,1) 75%,rgba(125,185,232,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=1 );
+
+
+}
+.logout{
+  display: block;
+  margin: 20px;
+  display: absolute;
+  color: red;
+}
+.welcome{
+  position: relative;
+  text-align: left;
+  top: 14px;
+  color: aliceblue;
+
+}
+.welcome a{
+  color: red;
+}
+.welcome a:hover{
+  color: red;
+}
+.logo{
+  position: absolute;
+  right: 7px;
+  top: 15px;
+
+}
+.navigation .left{
+    display: inline-block;
+}
+.navigation .right{
+    display: inline-block;
+}
+
+/*
+*Flex grid
+*/
+.main-container{
+    height: 100%;
+}
+.content{
+    display: flex;
+    height: 100%;
+}
+.flex-item{
+
+}
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    background: $primary-color1;
+    align-items: center;
+    height: 100vh;
+    box-shadow: 15px 15px 15px #ccc;
+
+}
+.sidebar > a > span{
+    float: left !important;
+    *padding-left: 15px;
+    margin-left: 15px;
+}
+.sidebar  .fa{
+  *color: red !important;
+  vertical-align: baseline !important;
+  font-size: 20px;
+    height: 20px;
+}
+.inner-content{
+    margin-top: 10px;
+    flex: 4;
+}
+/*
+* Buttons and Tabs
+*/
+.btn-one{
+    *margin-top: 10px;
+}
+.btn-info,
+.btn-info:active,
+.btn-info:focus{
+    background: $primary-color1;
+    *padding: 10px 15px;
+    font-weight: bold;
+    border: 2px solid transparent;
+    border-radius: 0;
+    font-size: 15px;
+    outline: 0;
+}
+.btn-info:hover{
+    background: $sky-blue;
+      outline: 0;
+}
+.btn-danger,
+.btn-danger:active,
+.btn-danger:focus{
+    background: $highlight-red;
+    *padding: 10px 15px;
+    font-weight: bold;
+    border: 2px solid transparent;
+    border-radius: 0;
+    font-size: 15px;
+    outline: 0;
+}
+.btn-danger:hover{
+  opacity: .7;
+    outline: 0;
+}
+.btn-sidebar{
+    padding: 20px;
+    color: white;
+    *background-color:$primary-color1;
+    *margin-bottom: 10px;
+    width: 100%;
+    vertical-align: middle;
+    border-bottom: 1px solid #ccc;
+   box-shadow: inset 0 0 0 0 $primary-color1;
+	-webkit-transition: all ease .5s;
+	-moz-transition: all ease .5s;
+	transition: all ease .5s;
+
+}
+.btn-sidebar:hover{
+    *background-color: $sky-blue;
+     box-shadow: inset 300px 0 0 0 $sky-blue;
+}
+.btn-primary{
+  background: $sky-blue;
+  border: 2px solid transparent;
+}
+.btn-primary:hover{
+  background: $primary-color1;
+  border: 2px solid $primary-color1;
+}
+.active-tab{
+    background-color: $sky-blue;
+}
+/*
+* Table
+*/
+.section-heading{
+
+    text-align: center;
+    margin: 2px;
+    font-size: 13px;
+}
+h3 .section-heading{
+  font-size: 14px;
+}
+
+table{
+    text-align: center;
+    width: 100%;
+}
+.panel-default .panel-heading{
+  *background: $primary-color1;
+  *color: #fff;
+
+}
+table thead th {
+  padding: 3px;
+  font-size: 12px;
+  font-weight: 400;
+  vertical-align: middle;
+  color: $primary-color1;
+}
+table>tbody>tr>td {
+  padding: 6px;
+  font-size: 12px;
+  *border-bottom: 1px solid black;
+  text-align: left;
+  color: $primary-color1;
+}
+.table>thead>tr>th{
+  vertical-align: middle;
+  font-weight: 700;
+  color: $primary-color1;
+}
+table> thead> tr> td{
+  font-weight: 600;
+  color: $primary-color1;
+}
+.text-center{
+  text-align: center;
+}
+.table-centered thead th,
+.table-centered tbody tr td{
+  text-align: center;
+}
+.table-text-center > td{
+  text-align: center;
+}
+
+.table-striped > tbody > tr:nth-child(2n+1) > td, .table-striped > tbody > tr:nth-child(2n+1) > th {
+   background-color: #EEEEEE;
+}
+
+/*
+* Forms
+*/
+.my-form-control{
+  height: 26px;
+  width: 50%;
+}
+
+/**
+ * Styling
+ */
+.bold{font-weight: bold}.red{color:red}.green{color:green}
+.blue-item{color:$primary-color1;}
+
+/**
+ * Login page
+ */
