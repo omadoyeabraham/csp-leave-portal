@@ -17,7 +17,7 @@ class adminPagesController extends Controller
       public function phm(){
 
         //Check to ensure only HR members can view this page
-        if( !(Auth::user()->isAdmin() ) )
+        if( (Auth::user()->isAdmin() ) )
         {
             session()->flash('statusDanger', 'You currently do not have admin access, pls contact the IT Unit for enquiries.');
             return redirect('/');
@@ -157,7 +157,7 @@ class adminPagesController extends Controller
            */
           
                //Check to ensure only HR members can view this page
-              if( !(Auth::user()->isAdmin() ) )
+              if( (Auth::user()->isAdmin() ) )
               {
                   session()->flash('statusDanger', 'You currently do not have admin access, pls contact the IT Unit for enquiries.');
                   return redirect('/');
@@ -213,7 +213,7 @@ class adminPagesController extends Controller
 
         public function viewCarryOver(){
              //Check to ensure only HR members can view this page
-        if( !(Auth::user()->isAdmin() ) )
+        if( (Auth::user()->isAdmin() ) )
         {
             session()->flash('statusDanger', 'You currently do not have admin access, pls contact the IT Unit for enquiries.');
             return redirect('/');

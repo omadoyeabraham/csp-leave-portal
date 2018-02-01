@@ -123,8 +123,8 @@ return [
 			                    |
 		*/
 
-		'admin_username' => 'abraham.omadoye',
-		'admin_password' => 'csp_1234',
+		'admin_username' => 'administrator',
+		'admin_password' => 'Alcatr@z@17',
 
 		/*
 			                    |--------------------------------------------------------------------------

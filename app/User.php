@@ -55,7 +55,7 @@ class User extends Authenticatable
 
 
     /**
-     * Checks if the user database
+     * Checks if the user's biodata is complete on the intranet portal
      * @return [type] [description]
      */
     public function bioDataIsComplete()
@@ -72,6 +72,10 @@ class User extends Authenticatable
         
     }
 
+    /**
+     * Checks to see if the user is a confirmed member of staff
+     * @return boolean [description]
+     */
     public function isConfirmed()
     {
         $employee = $this->employee;
@@ -90,8 +94,6 @@ class User extends Authenticatable
            return session('global_user');
         }
 
-
-       // dd($globalUser);
     }
 
     /**
@@ -295,7 +297,7 @@ class User extends Authenticatable
           if($this->line_manager !== "default")
           {
                $this->lineManagersList = array_diff($this->lineManagersList,array($this->line_manager));
-               array_unshift($this->lineManagersList, $this->line_manager ) ;
+               array_unshift($this->lineManagersList, $this->line_manager );
           }
 
 
@@ -346,8 +348,7 @@ class User extends Authenticatable
        */
       public function getDaysEarnedTillDate()
       {
-          //  $eagerLoadedUser = Auth::user()->load('employee');
-            //dd($eagerLoadedUser);
+          
             $employeeStartDate = session('global_user')->employee->Emp_Start_Date;
             $date = date_parse($employeeStartDate);
             $employeeStartYear      =  $date['year'];
@@ -371,7 +372,7 @@ class User extends Authenticatable
               $this->daysEarnedTillDate = ceil($daysEarnedPerMonth * ($month - 1) );
             }
 
-            //dd($this->daysEarnedTillDate);
+            
           return $this->daysEarnedTillDate;
       }
 
